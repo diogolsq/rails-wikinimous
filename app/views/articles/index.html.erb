@@ -1,0 +1,14 @@
+<h1>List of Articles</h1>
+<ol>
+  <% @articles.each do |article| %>
+    <li><%= link_to article.title, article_path(article) %>
+    <p><%= article.content %></p>
+    </li>
+
+  <% end %>
+</ol>
+
+
+<p><%= link_to 'add a new article', new_article_path %></p>
+<!-- <p><a href="tasks/new"> add a new task</a></p> -->
+
